@@ -31,6 +31,20 @@
 
 > **基准** · 对 GCC 16.1.0 `-O2`：43 类基准 / 129 个工作量点 / 9675 次计时；96 个语义等价点的几何均值 **0.8451**，剔除 6 类由字符串构造与数学库主导的项后 **≈0.98**。LLVM 路径的构建时间与峰值内存为 Cranelift 路径的 **2.0× / 1.7×**。
 
+## 上游贡献
+
+| 上游 | 修复 | 状态 |
+| --- | --- | --- |
+| **lz4**<br><sub>GB/s 级实时压缩事实标准 · Linux 内核 / Android / ZFS 内置，数十亿设备在跑</sub> | HC `continue_destSize` 部分消费后的流状态损坏——官方 changelog 单独致谢 | ![](https://img.shields.io/badge/credited-1F7A54?style=flat-square&labelColor=0B1220) |
+| **redis-rs**<br><sub>Rust 生态事实标准的 Redis 客户端</sub> | cluster-async ASKING 失败传播与重定向路由重置 #2305 / #2306 | ![](https://img.shields.io/badge/merged-1F7A54?style=flat-square&labelColor=0B1220) |
+| **libcoap**<br><sub>IoT 通信协议 CoAP（RFC 7252）的主流 C 实现</sub> | OSCORE CBOR 大计数导致的无限循环 #2109 | ![](https://img.shields.io/badge/merged-1F7A54?style=flat-square&labelColor=0B1220) |
+| **openmls**<br><sub>IETF 端到端加密群聊标准 MLS（RFC 9420）主流 Rust 实现</sub> | MemoryStorage 提案队列残留 #2163（#2165 / #2166 因上游裁撤 DS crate 关闭） | ![](https://img.shields.io/badge/merged-1F7A54?style=flat-square&labelColor=0B1220) |
+| **nginx**<br><sub>全球三分之一的网站跑在它上面</sub> | 空 `X-Forwarded-For` 读越界 · slice 滤镜 `Content-Range` 有符号溢出（UBSan 复现） | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
+| **systemd**<br><sub>主流 Linux 发行版的 1 号进程</sub> | journal-remote 大文件上传边界与断点续传健壮性（多轮 review） | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
+| **esp-idf**<br><sub>乐鑫 ESP32 系列官方开发框架</sub> | 边界校验 #19381–#19383：UART 队列长度 · OTA 分区数上界 · flash 读取越界 | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
+| **oxc**<br><sub>高性能 JS 工具链（Rust 实现）</sub> | minifier / parser / regex / checker 共 22 个修复 | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
+| openssl · micropython · libsql · hyper · nghttp3 | 安全审计、边界与并发修复 | ![](https://img.shields.io/badge/partial-3F5A6E?style=flat-square&labelColor=0B1220) |
+
 ## 项目
 
 <table>
@@ -71,20 +85,6 @@ Windows 托盘应用，后台记录键盘输入：SQLite 本地存储，完整�
 </td>
 </tr>
 </table>
-
-## 上游贡献
-
-| 上游 | 修复 | 状态 |
-| --- | --- | --- |
-| **nginx** | 空 `X-Forwarded-For` 读越界 · slice 滤镜 `Content-Range` 有符号溢出（UBSan 复现） | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
-| **systemd** | journal-remote 大文件上传边界与断点续传健壮性（多轮 review） | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
-| **esp-idf** | 边界校验 #19381–#19383：UART 队列长度 · OTA 分区数上界 · flash 读取越界 | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
-| **openmls** | MemoryStorage 提案队列残留 #2163；#2165 / #2166 因上游裁撤 DS crate 关闭 | ![](https://img.shields.io/badge/merged-1F7A54?style=flat-square&labelColor=0B1220) |
-| **redis-rs** | cluster-async 的 ASKING 失败传播与重定向路由重置 #2305 / #2306 | ![](https://img.shields.io/badge/merged-1F7A54?style=flat-square&labelColor=0B1220) |
-| **libcoap** | OSCORE CBOR 大计数导致的无限循环 #2109 | ![](https://img.shields.io/badge/merged-1F7A54?style=flat-square&labelColor=0B1220) |
-| **oxc** | minifier / parser / regex / checker 共 22 个修复 | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
-| **lz4** | HC `continue_destSize` 部分消费后的流状态损坏——官方 changelog 单独致谢 | ![](https://img.shields.io/badge/credited-1F7A54?style=flat-square&labelColor=0B1220) |
-| openssl · micropython · libsql · hyper · nghttp3 | 安全审计、边界与并发修复 | ![](https://img.shields.io/badge/partial-3F5A6E?style=flat-square&labelColor=0B1220) |
 
 ## 统计
 
