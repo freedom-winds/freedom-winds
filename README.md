@@ -12,8 +12,8 @@
 </picture>
 <br>
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=3600&pause=1500&color=22D3EE&center=true&vCenter=true&width=760&height=44&lines=%E5%86%99%E4%B8%80%E9%97%A8%E7%BC%96%E8%AF%91%E8%AF%AD%E8%A8%80%EF%BC%8C%E9%80%A0%E5%87%A0%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%99%A8%EF%BC%8C%E9%A1%BA%E4%BE%BF%E7%BB%99%E5%A4%A7%E5%9E%8B%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8A%93%E8%99%AB%E3%80%82">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=3600&pause=1500&color=12557A&center=true&vCenter=true&width=760&height=44&lines=%E5%86%99%E4%B8%80%E9%97%A8%E7%BC%96%E8%AF%91%E8%AF%AD%E8%A8%80%EF%BC%8C%E9%80%A0%E5%87%A0%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%99%A8%EF%BC%8C%E9%A1%BA%E4%BE%BF%E7%BB%99%E5%A4%A7%E5%9E%8B%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8A%93%E8%99%AB%E3%80%82" alt="写一门编译语言，造几个仿真器，顺便给大型开源项目抓虫。">
+<source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=3600&pause=1500&color=22D3EE&center=true&vCenter=true&width=760&height=44&repeat=false&lines=%E5%86%99%E4%B8%80%E9%97%A8%E7%BC%96%E8%AF%91%E8%AF%AD%E8%A8%80%EF%BC%8C%E9%80%A0%E5%87%A0%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%99%A8%EF%BC%8C%E9%A1%BA%E4%BE%BF%E7%BB%99%E5%A4%A7%E5%9E%8B%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8A%93%E8%99%AB%E3%80%82">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=3600&pause=1500&color=12557A&center=true&vCenter=true&width=760&height=44&repeat=false&lines=%E5%86%99%E4%B8%80%E9%97%A8%E7%BC%96%E8%AF%91%E8%AF%AD%E8%A8%80%EF%BC%8C%E9%80%A0%E5%87%A0%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%99%A8%EF%BC%8C%E9%A1%BA%E4%BE%BF%E7%BB%99%E5%A4%A7%E5%9E%8B%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8A%93%E8%99%AB%E3%80%82" alt="写一门编译语言，造几个仿真器，顺便给大型开源项目抓虫。">
 </picture>
 <br><br>
 <b>写一门编译语言</b> — Rust 从零实现的原生编译语言 <a href="https://github.com/freedom-winds/talqor">talqor</a>，Cranelift + LLVM 双后端<br>
@@ -53,11 +53,21 @@
 基本体 / 草图拉伸 / STEP 导入建模；内置 <b>2D 稳态导热</b>与<b>二维静电场</b>求解器及原生热学 CLI；场分布可视化，工程可保存重开。Three.js 画布，纯本地运行。
 </td>
 <td width="50%" valign="top">
-<b>工具</b><br>
-<sub>顺手造，日常用</sub><br><br>
-<a href="https://github.com/freedom-winds/CodexMux">CodexMux</a> — OpenAI Codex 运行时模型路由<br>
-<a href="https://github.com/freedom-winds/newapi-antiAnti">newapi-antiAnti</a> — new-api 内容审核管理面板<br>
-<a href="https://github.com/freedom-winds/typeFlow">typeFlow</a> — 键盘行为记录软件
+<b><a href="https://github.com/freedom-winds/CodexMux">CodexMux</a></b><br>
+<sub>OpenAI Codex 运行时模型路由</sub><br><br>
+Codex 与 NewAPI 之间的本地控制平面：逻辑模型名保持稳定，按健康状态为每次请求挑选物理模型，<b>输出开始前完成故障转移</b>，跨不兼容模型 API 适配推理参数；带可视化路由编辑器，单文件 EXE 免安装运行。
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<b><a href="https://github.com/freedom-winds/newapi-antiAnti">newapi-antiAnti</a></b><br>
+<sub>new-api 内容审核管理面板</sub><br><br>
+Go 单二进制<b>独立服务</b>，直连 new-api 的 PostgreSQL，为内容审核补丁提供 Web 面板：抽检配置与记录、违规检出统计、被标记对话的人工复核；<b>不修改 new-api 任何代码</b>，脚本一键部署。
+</td>
+<td width="50%" valign="top">
+<b><a href="https://github.com/freedom-winds/typeFlow">typeFlow</a></b><br>
+<sub>键盘行为记录与统计</sub><br><br>
+Windows 托盘应用，后台记录键盘输入：SQLite 本地存储，完整历史 <b>AES-GCM 加密</b>；仪表盘展示按键频次、打字速率与活跃时段统计。
 </td>
 </tr>
 </table>
@@ -73,7 +83,8 @@
 | **redis-rs** | cluster-async 的 ASKING 失败传播与重定向路由重置 #2305 / #2306 | ![](https://img.shields.io/badge/merged-1F7A54?style=flat-square&labelColor=0B1220) |
 | **libcoap** | OSCORE CBOR 大计数导致的无限循环 #2109 | ![](https://img.shields.io/badge/merged-1F7A54?style=flat-square&labelColor=0B1220) |
 | **oxc** | minifier / parser / regex / checker 共 22 个修复 | ![](https://img.shields.io/badge/open-1E5B82?style=flat-square&labelColor=0B1220) |
-| openssl · lz4 · micropython · libsql · hyper · nghttp3 | 安全审计、边界与并发修复 | ![](https://img.shields.io/badge/partial-3F5A6E?style=flat-square&labelColor=0B1220) |
+| **lz4** | HC `continue_destSize` 部分消费后的流状态损坏——官方 changelog 单独致谢 | ![](https://img.shields.io/badge/credited-1F7A54?style=flat-square&labelColor=0B1220) |
+| openssl · micropython · libsql · hyper · nghttp3 | 安全审计、边界与并发修复 | ![](https://img.shields.io/badge/partial-3F5A6E?style=flat-square&labelColor=0B1220) |
 
 ## 统计
 
@@ -109,7 +120,8 @@
 | [nghttp3](https://github.com/ngtcp2/nghttp3) | #549 QPACK Required Insert Count 除零（open）· #547 / #548 closed |
 | [micropython](https://github.com/micropython/micropython) | #19812 IOBase write 传 memoryview（open）· #19811 closed |
 | [libsql](https://github.com/tursodatabase/libsql) | #2303 legacy HTTP savepoint 检查 · #2304 cursor step_end 反序列化（open） |
-| lz4 · rust-sdk · modrinth/code · openssl | 边界、生命周期与解压路径修复（closed / 部分合并） |
+| [lz4](https://github.com/lz4/lz4) | #1935 `continue_destSize` 流状态损坏（维护者确认并以独立补丁修复，随 v1.11.0 发布，changelog 致谢 @freedom-winds）· #1936 closed |
+| rust-sdk · modrinth/code · openssl | 边界、生命周期与解压路径修复（closed / 部分合并） |
 
 </details>
 
